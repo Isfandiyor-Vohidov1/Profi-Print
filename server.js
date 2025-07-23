@@ -4,7 +4,7 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const corsOptions = {
     origin: 'http://127.0.0.1:5501',
 };
