@@ -12,7 +12,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const url = 'mongodb://127.0.0.1:27017';
+const url = 'mongodb+srv://profi-print-user:PallMall1984@cluster0.j1om0bd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const dbName = 'profi-print';
 const client = new MongoClient(url);
 let db;
