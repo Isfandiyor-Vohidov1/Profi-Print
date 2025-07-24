@@ -4,15 +4,15 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 3000;
 const corsOptions = {
-    origin: 'http://127.0.0.1:5501',
+    origin: ['http://127.0.0.1:5501', 'http://profiprint.netlify.app']
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const url = 'mongodb+srv://profi-print-user:PallMall1984@cluster0.j1om0bd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url = 'mongodb://127.0.0.1:27017';
 const dbName = 'profi-print';
 const client = new MongoClient(url);
 let db;
